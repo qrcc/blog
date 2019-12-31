@@ -30,7 +30,7 @@ a{text-decoration:none;}
 .return_top a:hover{background-position:0 -47px;}
 /*nav end*/
 /*footer start*/
-.footer{width:100%;line-height:30px;background:#494949;font-size:14px;color:#fff;text-align:center;}
+.footer{width:100%;line-height:30px;bottom:0;position:fixed;background:#494949;font-size:14px;color:#fff;text-align:center;}
 .footer a{color:#fff;}
 .footer a:hover{text-decoration:underline;}
 /*footer end*/
