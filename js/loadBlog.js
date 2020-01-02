@@ -8,11 +8,12 @@ function loadBlog(date) {
     x = a.getElementsByTagName("date");
     for(i=0;i<x.length;i++)
     {
+        var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
+        var inner = "<div>"+date+"</div>";
         var sectionLaber = document.createElement("section");
         sectionLaber.className = "dt-main effect";
         
         div.appendChild(sectionLaber);
-        var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         alert(date)
         
     }
