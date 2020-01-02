@@ -10,6 +10,7 @@ function loadBlog(date) {
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
+        var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
         var inner = "<div>"+dateLine+"</div>";
         inner = inner + "<h1>"+headLine+"</h1>";
         alert(inner);
