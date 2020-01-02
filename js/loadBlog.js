@@ -11,6 +11,7 @@ function loadBlog(date) {
     {
         var sectionLaber = document.createElement("section");
         sectionLaber.className = "dt-main effect";
+        alert(0);
         var divContentLaber = document.createElement("div");
         alert(1);
         divContentLaber.className = "dt-content";
