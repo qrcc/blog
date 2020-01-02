@@ -10,6 +10,7 @@ function loadBlog(date) {
     for(i=0;i<x.length;i++)
     {
         var sectionLaber = document.createElement("section");
+        alert("1111");
         sectionLaber.className = "dt-main effect";
         alert(0);
         var divContentLaber = document.createElement("div");
