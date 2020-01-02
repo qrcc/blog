@@ -67,9 +67,15 @@
 	padding: 20px;
 	overflow: hidden;
 }
+
+.dt-content{
+	width: 600px;
+}
 .dt-content p{
+	word-break: break-all;
+	width: 100%;
 	text-indent: 2em;
-	line-height: 3;
+	line-height: 25px;
 	color: #666;
 }
 .dt-content img{
