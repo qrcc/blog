@@ -1,10 +1,11 @@
 function loadBlog(date) {
     xmltext = new XMLHttpRequest;
-    xmltext.open("GET","../xml/test.xml",false);
+    xmltext.open("GET","../xml/blog.xml",false);
     xmltext.send();
     a = xmltext.responseXML;
+    var div = getElementById("xmlid")
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
-    x = a.getElementsByTagName("note");
+    x = a.getElementsByTagName("date");
     for(i=0;i<x.length;i++)
     {
         document.write("<div class='aaaa'>");
