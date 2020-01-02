@@ -12,9 +12,13 @@ function loadBlog(date) {
         var sectionLaber = document.createElement("section");
         sectionLaber.className = "dt-main effect";
         var divContentLaber = document.createElement("div");
+        alert(1);
         divContentLaber.className = "dt-content";
+        alert(2);
         sectionLaber.appendChild(divContentLaber);
+        alert(3);
         div.appendChild(sectionLaber);
+        alert(4);
         var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
     }
 }
