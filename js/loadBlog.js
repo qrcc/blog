@@ -5,11 +5,13 @@ function loadBlog(date) {
     a = xmltext.responseXML;
     var div = document.getElementById("blog");
     alert(div);
-    alert(div);
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("blog");
-    var sectionLaber = document.createElement("p");
+    alert(x);
+    var sectionLaber = document.createElement("section");
+    alert(sectionLaber);
     sectionLaber.className = "dt-main effect111";
+    alert(sectionLaber);
     div.appendChild(sectionLaber);
     for(i=0;i<x.length;i++)
     {
