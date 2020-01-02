@@ -16,6 +16,7 @@ function loadBlog(date) {
         sectionLaber.appendChild(divContentLaber);
         alert(2)
         div.appendChild(sectionLaber);
+        alert(3)
         var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         
     }
