@@ -11,6 +11,7 @@ function loadBlog(date) {
         var sectionLaber = document.createElement("section")
         section.className = "dt-main effect111"
         div.appendChild(sectionLaber);
+        div.appendChild(p);
         document.write("<div class='aaaa'>");
         document.write(x[i].getElementsByTagName("to")[0].childNodes[0].nodeValue);
         document.write("</div>");
