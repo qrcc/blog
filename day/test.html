@@ -6,28 +6,34 @@
     <style>
      .aaaa{width: 30%;height: 50px;line-height: 50px;text-align: center;border: 1px solid darkblue;float: left;}
     </style>
+    <script>
+        window.onload = myFunction()
+    </script>
+    <script>
+            function myFunction() {
+                xmltext = new XMLHttpRequest;
+                xmltext.open("GET","../xml/test.xml",false);
+                xmltext.send();
+                a = xmltext.responseXML;
+                //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
+                x = a.getElementsByTagName("note");
+                for(i=0;i<x.length;i++)
+                {
+                document.write("<div class='aaaa'>");
+                document.write(x[i].getElementsByTagName("to")[0].childNodes[0].nodeValue);
+                document.write("</div>");
+                document.write("<div class='aaaa'>");
+                document.write(x[i].getElementsByTagName("heading")[0].childNodes[0].nodeValue);
+                document.write("</div>");
+                document.write("<div class='aaaa'>");
+                document.write(x[i].getElementsByTagName("body")[0].childNodes[0].nodeValue);
+                document.write("</div>");
+                }
+            }
+            </script>
   </head>
   <body>
     <div id="xmlid"></div>
-    <script>
-      xmltext = new XMLHttpRequest;
-      xmltext.open("GET","../xml/test.xml",false);
-      xmltext.send();
-      a = xmltext.responseXML;
-      //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
-      x = a.getElementsByTagName("note");
-      for(i=0;i<x.length;i++)
-      {
-        document.write("<div class='aaaa'>");
-        document.write(x[i].getElementsByTagName("to")[0].childNodes[0].nodeValue);
-        document.write("</div>");
-        document.write("<div class='aaaa'>");
-        document.write(x[i].getElementsByTagName("heading")[0].childNodes[0].nodeValue);
-        document.write("</div>");
-        document.write("<div class='aaaa'>");
-        document.write(x[i].getElementsByTagName("body")[0].childNodes[0].nodeValue);
-        document.write("</div>");
-      }
-    </script>
+   
   </body>
 </html>
