@@ -10,7 +10,7 @@ function loadBlog(date) {
     {
         var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var inner = "<div>"+date+"</div>";
-        alert(inner)
+        alert(inner);
         var sectionLaber = document.createElement("section");
         sectionLaber.className = "dt-main effect";
         sectionLaber.innerHTML = inner;
