@@ -4,14 +4,14 @@ function loadBlog(date) {
     xmltext.send();
     a = xmltext.responseXML;
     var div = document.getElementById("blog");
-    alert(div);
+    alert(1);
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("blog");
-    alert(x);
+    alert(2);
     var sectionLaber = document.createElement("section");
-    alert(sectionLaber);
+    alert(3);
     sectionLaber.className = "dt-main effect111";
-    alert(sectionLaber);
+    alert(4);
     div.appendChild(sectionLaber);
     for(i=0;i<x.length;i++)
     {
