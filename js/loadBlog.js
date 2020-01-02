@@ -4,6 +4,7 @@ function loadBlog(date) {
     xmltext.send();
     a = xmltext.responseXML;
     var div = getElementById("blog")
+    div.innerHTML="asdasdasdasd"
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("blog");
     var sectionLaber = document.createElement("section")
