@@ -5,12 +5,7 @@
 		<title>Hi Qren</title>	
 		<link href="../css/detailsPages.css" rel="stylesheet" type="text/css" /><!--详情页CSS-->
 		<link href="../css/rocketTop.css" rel="stylesheet" type="text/css" /><!--返回顶部-->
-		<script src="../js/loadBlog.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			
-			var div1 = document.getElementById("blog");
-    		alert(div1);
-		</script>
+		
 	</head>
 	<body>		
 		<header class="dtTitBg" id="dtTitBg" style="background:url(../images/img30.jpg) no-repeat;" >
@@ -75,4 +70,10 @@
 	</body>
 	<script src="../js/jquery-1.7.2.min.js"></script><!--1.7.2JQ引入-->
 	<script src="../js/rocketTop.js" type="text/javascript"></script><!--返回顶部-->
+	<script src="../js/loadBlog.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			window.onload = loadBlog("20200101")
+			var div1 = document.getElementById("blog");
+    		alert(div1);
+		</script>
 </html>

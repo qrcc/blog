@@ -3,7 +3,7 @@ function loadBlog(date) {
     xmltext.open("GET","../xml/blog.xml",false);
     xmltext.send();
     a = xmltext.responseXML;
-    var div = document.getElementsByClassName("aaa");
+    var div = document.getElementById("blog");
     alert(div);
     alert(div);
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
