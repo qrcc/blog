@@ -6,7 +6,7 @@ function loadBlog(date) {
     var div = document.getElementById("blog");
     alert(1);
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
-    x = a.getElementsByTagName("blog");
+    x = a.getElementsByTagName("date");
     alert(x)
     var sectionLaber = document.createElement("section");
     sectionLaber.className = "dt-main effect";
