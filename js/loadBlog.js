@@ -11,7 +11,7 @@ function loadBlog(date) {
     div.appendChild(sectionLaber);
     for(i=0;i<x.length;i++)
     {
-        var date = x[i].getElementsByTagName("dateLine")[0].nodeValue
-        alert( x[i].getElementsByTagName("dateLine")[0].nodeValue);
+        var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue
+        alert( x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue);
     }
 }
