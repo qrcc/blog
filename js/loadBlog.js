@@ -9,7 +9,7 @@ function loadBlog(date) {
     x = a.getElementsByTagName("blog");
     alert(x)
     var sectionLaber = document.createElement("section");
-    sectionLaber.className = "dt-main effect111";
+    sectionLaber.className = "dt-main effect";
     div.appendChild(sectionLaber);
     for(i=0;i<x.length;i++)
     {
