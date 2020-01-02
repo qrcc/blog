@@ -8,8 +8,10 @@ function loadBlog(date) {
     x = a.getElementsByTagName("date");
     for(i=0;i<x.length;i++)
     {
-        var date = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
-        var inner = "<div>"+date+"</div>";
+        var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
+        var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
+        var inner = "<div>"+dateLine+"</div>";
+        inner = inner + "<h1>"+headLine+"</h1>";
         alert(inner);
         var sectionLaber = document.createElement("section");
         sectionLaber.className = "dt-main effect";
