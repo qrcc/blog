@@ -7,11 +7,9 @@ function loadBlog(date) {
     alert(1);
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("blog");
-    alert(2);
+    alert(x)
     var sectionLaber = document.createElement("section");
-    alert(3);
     sectionLaber.className = "dt-main effect111";
-    alert(4);
     div.appendChild(sectionLaber);
     for(i=0;i<x.length;i++)
     {
