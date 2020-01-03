@@ -75,9 +75,11 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     for(i = 0; i < totalPageNum; i++)
     {
         if(pageNum == i + 1){
-            inner = inner + "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\" class=\"Index_on\">" + String(i + 1) + "</a></li>";
+            //inner = inner + "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\" class=\"Index_on\">" + String(i + 1) + "</a></li>";
+            inner = inner + "<li><a href=\"/" +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\" class=\"Index_on\">" + String(i + 1) + "</a></li>";
         }else{
-            inner = inner + "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
+            //inner = inner + "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
+            inner = inner + "<li><a href=\"/" +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
         }
     }
 
