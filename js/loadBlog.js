@@ -62,7 +62,7 @@ function loadBlog(date) {
 }
 
 function loadIndex(length,pageNum,listNum,routeDay) {
-    var url=location.search.substr(1);
+    var url=location.search.substr(0);
     alert(url);
     var inner = "<li><a href=\"" + url +"?d=" + routeDay + "&page=1" + "\" class=\"Index_on\">首页</a></li>";
 
