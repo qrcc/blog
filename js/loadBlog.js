@@ -40,6 +40,7 @@ function loadBlog(date) {
     start = (start < length)?start:(length-length%listNum - 1);
     end = start + listNum;
     end = (end < length)?end:length - 1;
+    alert(start);
     for(i = start; i < end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
