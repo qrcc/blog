@@ -83,6 +83,11 @@ function loadIndex(length,pageNum,listNum,routeDay) {
             inner = inner + "<li><a href=\"" + hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
         }
     }
+    if(pageNum == totalPageNum){
+        var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=" + totalPageNum + "\" class=\"Index_on\">尾页</a></li>";
+    }else{
+        var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=" + totalPageNum + "\">尾页</a></li>";
+    }
 
     var divI = document.getElementById("index");
     var ulLaber = document.createElement("ul");
