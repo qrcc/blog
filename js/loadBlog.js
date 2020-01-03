@@ -11,6 +11,7 @@ function GetQueryString(name) {
 
 function init(){
     loadBlog();
+    loadIndex();
 }
 function loadBlog(date) {
     listNum = 2;
@@ -25,10 +26,12 @@ function loadBlog(date) {
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
     length = x.length;
+    loadIndex(length,pageNum,listNum,routeDay);
     start = listNum * pageNum - 1; 
     start = (start < length)?start:(length-length%listNum);
-    alert(start)
-    for(i = 0; i < length; i++)
+    end = start + listNum;
+    end = (end < listNum)?end:listNum;
+    for(i = start; i < end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
@@ -48,4 +51,16 @@ function loadBlog(date) {
         div.appendChild(sectionLaber);
     }
     
+}
+
+function loadIndex(length,pageNum,listNum,routeDay) {
+    var inner = "<li><a href=\"#?d=2&page=1\" class=\"Index_on\">首页</a></li>";
+
+
+    var div = document.getElementById("index");
+    var ulLaber = document.createElement("ul");
+    ulLaber.innerHTML = inner;
+    div.appendChild(ulLaber);
+
+
 }
