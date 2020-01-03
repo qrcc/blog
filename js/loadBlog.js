@@ -64,7 +64,8 @@ function loadBlog(date) {
 function loadIndex(length,pageNum,listNum,routeDay) {
     var url=location.search.substr(0);
     alert(url);
-    var inner = "<li><a href=\"" + url + "\" class=\"Index_on\">首页</a></li>";
+    var inner = "<li><a href=\"" + url +"?d=" + routeDay + "&page=1" + "\" class=\"Index_on\">首页</a></li>";
+
     totalPageNum = parseInt(length/listNum) + 1
 
     var divI = document.getElementById("index");
