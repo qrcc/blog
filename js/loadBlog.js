@@ -11,7 +11,8 @@ function loadBlog(date) {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
         var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
-        var inner = "<div>"+dateLine+"</div>";
+        var inner = "<div class = \"dt-content\">";
+        inner = inner + "<div>"+dateLine+"</div>";
         inner = inner + "<h1>"+headLine+"</h1>";
         var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
         for(j = 0; j < sectionLines.length; j++)
@@ -19,7 +20,7 @@ function loadBlog(date) {
             alert(sectionLines[j].childNodes[0].nodeValue);
             inner = inner + "<p>"+ sectionLines[j].childNodes[0].nodeValue +"</p>";
         }
-        alert(inner);
+        inner = inner + "</div>";
         var sectionLaber = document.createElement("section");
         sectionLaber.className = "dt-main effect";
         sectionLaber.innerHTML = inner;
