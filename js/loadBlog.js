@@ -11,7 +11,7 @@ function GetQueryString(name) {
 
 function loadBlog(date) {
     var routeDay = GetQueryString("d");
-    var route = "../xml/blog"+ +".xml";
+    var route = "../xml/blog"+ routeDay +".xml";
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
     xmltext.send();
