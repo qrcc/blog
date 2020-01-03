@@ -67,11 +67,17 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     var hp = window.location.protocol;
     //alert(url);
     //alert(host);
+
+    ////首页
     if(pageNum == 1){
         var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=1" + "\" class=\"Index_on\">首页</a></li>";
     }else{
         var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=1" + "\">首页</a></li>";
     }
+    ////上一页
+    lastPageNum = (pageNum - 1) < 1 ? 1 : (pageNum -1);
+    inner = inner + "<li><a href=\"" + hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(lastPageNum + 1) + "\">上一页</a></li>";
+    ////中间页
     totalPageNum = parseInt(length/listNum) + 1;
     for(i = 0; i < totalPageNum; i++)
     {
@@ -83,6 +89,10 @@ function loadIndex(length,pageNum,listNum,routeDay) {
             inner = inner + "<li><a href=\"" + hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
         }
     }
+    ////下一页
+    laterPageNum = (pageNum + 1) > totalPageNum ? totalPageNum : (pageNum + 1);
+    inner = inner + "<li><a href=\"" + hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(laterPageNum + 1) + "\">下一页</a></li>";
+    ////尾页
     if(pageNum == totalPageNum){
         inner = inner + "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=" + totalPageNum + "\" class=\"Index_on\">尾页</a></li>";
     }else{
