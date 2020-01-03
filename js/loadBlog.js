@@ -59,11 +59,12 @@ function loadBlog(date) {
         sectionLaber.innerHTML = inner;
         div.appendChild(sectionLaber);
     }
-    
 }
 
 function loadIndex(length,pageNum,listNum,routeDay) {
-    var inner = "<li><a href=\"#?d=2&page=1\" class=\"Index_on\">首页</a></li>";
+    var url=location.search.substr(0);
+    alert(url);
+    var inner = "<li><a href=\"" + url + "\" class=\"Index_on\">首页</a></li>";
     totalPageNum = parseInt(length/listNum) + 1
 
     var divI = document.getElementById("index");
