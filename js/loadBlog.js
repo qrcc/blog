@@ -65,9 +65,6 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     var url=location.pathname;
     var host = location.hostname;
     var hp = window.location.protocol;
-    //alert(url);
-    //alert(host);
-
     ////首页
     if(pageNum == 1){
         var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=1" + "\" class=\"Index_on\">首页</a></li>";
@@ -98,7 +95,6 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     }else{
         inner = inner + "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=" + totalPageNum + "\">尾页</a></li>";
     }
-
     var divI = document.getElementById("index");
     var ulLaber = document.createElement("ul");
     ulLaber.innerHTML = inner;
