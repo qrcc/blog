@@ -9,9 +9,14 @@ function GetQueryString(name) {
     return context == null || context == "" || context == "undefined" ? "" : context;
     }
 
+function init(){
+    loadBlog();
+}
 function loadBlog(date) {
+    listNum = 2;
     var routeDay = GetQueryString("d");
     var route = "../xml/blog"+ routeDay +".xml";
+    var pageNum = GetQueryString("page");
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
     xmltext.send();
@@ -19,7 +24,11 @@ function loadBlog(date) {
     var div = document.getElementById("blog");
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
-    for(i = 0; i < x.length; i++)
+    length = x.length;
+    start = listNum * pageNum - 1; 
+    start = (start < length)?start:(length-length%listNum);
+    alert(start)
+    for(i = 0; i < length; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
