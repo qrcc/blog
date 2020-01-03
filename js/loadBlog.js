@@ -10,8 +10,10 @@ function GetQueryString(name) {
     }
 
 function loadBlog(date) {
+    var routeDay = GetQueryString("d");
+    var route = "../xml/blog"+ +".xml";
     xmltext = new XMLHttpRequest;
-    xmltext.open("GET","../xml/blog.xml",false);
+    xmltext.open("GET",route,false);
     xmltext.send();
     a = xmltext.responseXML;
     var div = document.getElementById("blog");
@@ -36,5 +38,5 @@ function loadBlog(date) {
         sectionLaber.innerHTML = inner;
         div.appendChild(sectionLaber);
     }
-    alert(GetQueryString("d"))
+    alert(GetQueryString("routeDay"))
 }
