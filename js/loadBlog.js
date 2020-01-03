@@ -16,8 +16,10 @@ function init(){
 function loadIndex(length,pageNum,listNum,routeDay) {
     var inner = "<li><a href=\"#?d=2&page=1\" class=\"Index_on\">首页</a></li>";
     alert(inner);
-
-    
+    var divI = document.getElementById("index");
+    var ulLaber = document.createElement("ul");
+    ulLaber.innerHTML = inner;
+    divI.appendChild(ulLaber);
 }
 
 function loadBlog(date) {
@@ -35,9 +37,9 @@ function loadBlog(date) {
     length = x.length;
     loadIndex(length,pageNum,listNum,routeDay);
     start = listNum * pageNum - 1; 
-    start = (start < length)?start:(length-length%listNum);
+    start = (start < length)?start:(length-length%listNum - 1);
     end = start + listNum;
-    end = (end < listNum)?end:listNum;
+    end = (end < length)?end:length - 1;
     for(i = start; i < end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
@@ -60,3 +62,12 @@ function loadBlog(date) {
     
 }
 
+function loadIndex(length,pageNum,listNum,routeDay) {
+    var inner = "<li><a href=\"#?d=2&page=1\" class=\"Index_on\">首页</a></li>";
+    totalPageNum = parseInt(length/listNum) + 1
+
+    var divI = document.getElementById("index");
+    var ulLaber = document.createElement("ul");
+    ulLaber.innerHTML = inner;
+    divI.appendChild(ulLaber);
+}
