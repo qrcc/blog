@@ -1,3 +1,12 @@
+function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+    return unescape(r[2]);
+    }
+    return null;
+    }
+
 function loadBlog(date) {
     xmltext = new XMLHttpRequest;
     xmltext.open("GET","../xml/blog.xml",false);
@@ -17,7 +26,6 @@ function loadBlog(date) {
         var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
         for(j = 0; j < sectionLines.length; j++)
         {
-            alert(sectionLines[j].childNodes[0].nodeValue);
             inner = inner + "<p>"+ sectionLines[j].childNodes[0].nodeValue +"</p>";
         }
         inner = inner + "</div>";
@@ -25,7 +33,6 @@ function loadBlog(date) {
         sectionLaber.className = "dt-main effect";
         sectionLaber.innerHTML = inner;
         div.appendChild(sectionLaber);
-        
-        
     }
+    alert(GetQueryString("d"))
 }
