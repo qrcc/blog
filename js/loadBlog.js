@@ -36,7 +36,7 @@ function loadBlog(date) {
     x = a.getElementsByTagName("date");
     length = x.length;
     loadIndex(length,pageNum,listNum,routeDay);
-    start = listNum * pageNum - 1; 
+    start = listNum * (pageNum - 1); 
     start = (start < length)?start:(length-length%listNum - 1);
     end = start + listNum;
     end = (end < length)?end:length - 1;
