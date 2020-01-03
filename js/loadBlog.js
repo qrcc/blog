@@ -68,9 +68,9 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     //alert(url);
     //alert(host);
     if(pageNum == 1){
-        var inner = "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=1" + "\" class=\"Index_on\">首页</a></li>";
+        var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=1" + "\" class=\"Index_on\">首页</a></li>";
     }else{
-        var inner = "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=1" + "\">首页</a></li>";
+        var inner = "<li><a href=\"" + hp + "//" +  host +  url +"?d=" + routeDay + "&page=1" + "\">首页</a></li>";
     }
     totalPageNum = parseInt(length/listNum) + 1;
     for(i = 0; i < totalPageNum; i++)
