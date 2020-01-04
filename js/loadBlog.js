@@ -59,7 +59,7 @@ function loadBlog(date) {
             if(images!="null"){
                 for(k = 0; k < images.length; k++)
                 {
-                    inner = inner + "<img src=\"../blogImg/" + images[k].childNodes[0].nodeValue + "\">";
+                    inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + images[k].childNodes[0].nodeValue + "\">";
                 }
             }
         }
