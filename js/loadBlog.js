@@ -43,7 +43,6 @@ function loadBlog(date) {
     for(i = start; i <= end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
-        alert(dateLine);
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
         var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
         var inner = "<div class = \"dt-content\">";
@@ -54,8 +53,7 @@ function loadBlog(date) {
         {
             var text = sectionLines[j].getElementsByTagName("text");
             inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
-            var images = sectionLines[j].getElementsByTagName("text");
-            alert(images);
+            var images = sectionLines[j].getElementsByTagName("image");
             if(images!="null"){
                 for(k = 0; k < images.length; k++)
                 {
