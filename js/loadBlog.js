@@ -23,7 +23,7 @@ function loadIndex(length,pageNum,listNum,routeDay) {
 }
 
 function loadBlog(date) {
-    var listNum = 2;
+    var listNum = 1;
     var routeDay = GetQueryString("d");
     var route = "../xml/blog"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
