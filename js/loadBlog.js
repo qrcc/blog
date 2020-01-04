@@ -43,7 +43,7 @@ function loadBlog(date) {
     alert(length);
     alert(start);
     alert(end);
-    for(i = start; i < end; i++)
+    for(i = start; i <= end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         alert(dateLine);
