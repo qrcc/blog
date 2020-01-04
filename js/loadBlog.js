@@ -40,9 +40,6 @@ function loadBlog(date) {
     start = (start < length)?start:(length-length%listNum - 1);
     end = start + listNum - 1;
     end = (end <= length)?end:length - 1;
-    //alert(length);
-    //alert(start);
-    //alert(end);
     for(i = start; i <= end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
@@ -55,7 +52,16 @@ function loadBlog(date) {
         var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
         for(j = 0; j < sectionLines.length; j++)
         {
-            inner = inner + "<p>"+ sectionLines[j].childNodes[0].nodeValue +"</p>";
+            var text = sectionLines[j].getElementsByTagName("text");
+            inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
+            var images = sectionLines[j].getElementsByTagName("text");
+            alert(images);
+            if(images!="null"){
+                for(k = 0; k < images.length; k++)
+                {
+                    inner = inner + "<img src=\"../blogImg/" + images[k].childNodes[0].nodeValue + "\">";
+                }
+            }
         }
         inner = inner + "</div>";
         var sectionLaber = document.createElement("section");
@@ -83,10 +89,8 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     for(i = 0; i < totalPageNum; i++)
     {
         if(pageNum == i + 1){
-            //inner = inner + "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\" class=\"Index_on\">" + String(i + 1) + "</a></li>";
             inner = inner + "<li><a href=\""+ hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(i + 1) + "\" class=\"Index_on\">" + String(i + 1) + "</a></li>";
         }else{
-            //inner = inner + "<li><a href=\"" + host +  url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
             inner = inner + "<li><a href=\"" + hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(i + 1) + "\">" + String(i + 1) + "</a></li>";
         }
     }
