@@ -38,7 +38,7 @@ function loadBlog(date) {
     loadIndex(length,pageNum,listNum,routeDay);
     start = listNum * (pageNum - 1); 
     start = (start < length)?start:(length-length%listNum - 1);
-    end = start + listNum;
+    end = start + listNum - 1;
     end = (end <= length)?end:length - 1;
     //alert(length);
     //alert(start);
@@ -79,7 +79,7 @@ function loadIndex(length,pageNum,listNum,routeDay) {
     lastPageNum = (pageNum - 1) < 1 ? 1 : (pageNum -1);
     inner = inner + "<li><a href=\"" + hp + "//" + host + url +"?d=" + routeDay + "&page=" + String(lastPageNum + 1) + "\">上一页</a></li>";
     ////中间页
-    totalPageNum = parseInt(length/listNum) + 1;
+    totalPageNum = Math.ceil(length/listNum);
     for(i = 0; i < totalPageNum; i++)
     {
         if(pageNum == i + 1){
