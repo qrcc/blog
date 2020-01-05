@@ -79,6 +79,8 @@
 	color: #666;
 }
 .dt-content img{
+	width:60%;
+	height:auto;
 	clear: both; 
 	display: block; 
 	margin:auto; 
