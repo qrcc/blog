@@ -1,5 +1,5 @@
 $(function(){ 
-    $("img").dbclick(function(){ 
+    $("img").dblclick(function(){ 
       var _this = $(this);//将当前的pimg元素作为_this传入函数 
       imgShow("#outerdiv", "#innerdiv", "#bigimg", _this); 
     }); 
