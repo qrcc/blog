@@ -83,6 +83,15 @@
 	display: block; 
 	margin:auto; 
 }
+
+.dt-content .imgDesc{
+	word-break: break-all;
+	text-align:center;
+	text-indent: 2em;
+	line-height: 25px;
+	color: #666;
+}
+
 .dt-content h2,h3,h4{
 	color:#666666;
 	text-align: center;

@@ -60,6 +60,9 @@ function loadBlog(date) {
                     imgName = images[k].childNodes[0].nodeValue;
                     imgName = imgName.replace(/\s*/g,"");
                     inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\">";
+                    imgDesc = images[k].getAttribute("describe");
+                    inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";
+
                 }
             }
         }
