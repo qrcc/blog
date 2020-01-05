@@ -62,7 +62,6 @@ function loadBlog(date) {
                     inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\">";
                     //图片描述
                     imgDesc = images[k].getAttribute("describe");
-                    alert(imgDesc);
                     if(imgDesc){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
                 }
             }
