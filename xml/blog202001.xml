@@ -129,4 +129,29 @@
             </section>
         </bodyLine>
     </date>
+    <date name="20200105">
+        <dateLine>
+            日期：2020.01.05
+        </dateLine>
+        <headLine>
+            还没投稿
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    我想知道自己能拖的什么程度，内心极其复杂。
+                </text>
+            </section>
+            <section>
+                <text>
+                    在页面上弄了个图片点击放大的功能，还有鼠标光标改变的功能。
+                </text>
+            </section>
+            <section>
+                <text>
+                    效率太低。是失眠的原因吗。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
 </log>
