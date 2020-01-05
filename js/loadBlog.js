@@ -54,7 +54,7 @@ function loadBlog(date) {
             inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
             var images = sectionLines[j].getElementsByTagName("image");
             //段落中的图片
-            if(images!="null"){
+            if(images!=null){
                 for(k = 0; k < images.length; k++)
                 {
                     imgName = images[k].childNodes[0].nodeValue;
@@ -63,7 +63,7 @@ function loadBlog(date) {
                     //图片描述
                     imgDesc = images[k].getAttribute("describe");
                     alert(imgDesc);
-                    if(imgDesc != "null"){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
+                    if(imgDesc != null){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
                 }
             }
         }
