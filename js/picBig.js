@@ -39,18 +39,3 @@ $(function(){
     }); 
   }
 
-$(function () {
-var x = 15;
-var y = 10;
-$("img").mouseover(function (e) { //当鼠标指针从元素上移入时 
-var msg = "双击放大";
-var tooltip = "<div id='tooltip'>" + msg + "</div>";
-$("body").append(tooltip);
-$("#tooltip").css({ "top": (e.pageY + y) + "px", "left": (e.pageX + x) + "px" }).show("fast");
-}).mouseout(function () { //当鼠标指针从元素上移开时 
-var msg = "点击关闭";
-$("#tooltip").remove();
-}).mousemove(function (e) { //当鼠标指针从元素上移动时 
-$("#tooltip").css({ "top": (e.pageY + y) + "px", "left": (e.pageX + x) + "px" });
-});
-});
