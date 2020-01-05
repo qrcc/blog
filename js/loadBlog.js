@@ -13,33 +13,30 @@ function init(){
     loadBlog();
 }
 
-function loadIndex(length,pageNum,listNum,routeDay) {
-    var inner = "<li><a href=\"#?d=2&page=1\" class=\"Index_on\">首页</a></li>";
-    alert(inner);
-    var divI = document.getElementById("index");
-    var ulLaber = document.createElement("ul");
-    ulLaber.innerHTML = inner;
-    divI.appendChild(ulLaber);
-}
-
 function loadBlog(date) {
+    //获得参数：每页列出的文档数,文档所属日期,以此获得对应XML文件的位置
     var listNum = 2;
     var routeDay = GetQueryString("d");
     var route = "../xml/blog"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
+    //获得XML文件
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
     xmltext.send();
     a = xmltext.responseXML;
+    //将XML文件内容插入到HTML相应标签中
     var div = document.getElementById("blog");
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
     length = x.length;
+    //获得页面导航标签
     loadIndex(length,pageNum,listNum,routeDay);
+    //获得当前页面文档的起始坐标和终止坐标
     start = listNum * (pageNum - 1); 
     start = (start < length)?start:(length-length%listNum - 1);
     end = start + listNum - 1;
     end = (end <= length)?end:length - 1;
+    //迭代出文章
     for(i = start; i <= end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
@@ -49,20 +46,23 @@ function loadBlog(date) {
         inner = inner + "<div>"+dateLine+"</div>";
         inner = inner + "<h1>"+headLine+"</h1>";
         var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
+        //迭代出段落
         for(j = 0; j < sectionLines.length; j++)
         {
+            //段落中的文字
             var text = sectionLines[j].getElementsByTagName("text");
             inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
             var images = sectionLines[j].getElementsByTagName("image");
+            //段落中的图片
             if(images!="null"){
                 for(k = 0; k < images.length; k++)
                 {
                     imgName = images[k].childNodes[0].nodeValue;
                     imgName = imgName.replace(/\s*/g,"");
                     inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\">";
+                    //图片描述
                     imgDesc = images[k].getAttribute("describe");
-                    inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";
-
+                    if(imgDesc != "null"){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
                 }
             }
         }
