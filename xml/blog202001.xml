@@ -154,4 +154,29 @@
             </section>
         </bodyLine>
     </date>
+    <date name="20200106">
+        <dateLine>
+            日期：2020.01.06
+        </dateLine>
+        <headLine>
+            投了一天稿
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    虽然很麻烦，但是总算告一段落，走一步算一步。
+                </text>
+            </section>
+            <section>
+                <text>
+                    事情不做完真的不知道会遇到哪些问题，任何事情都不一定和想象中的一样发展，越是没做过的事情就越不可能和自己想的一样，即使是做过千百遍板上钉钉的事情也不一定会和以前一样发展。
+                </text>
+            </section>
+            <section>
+                <text>
+                    我们的认识太有限了，在这个有限的认识里得出的结论很难在真正的客观世界中得到应验。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
 </log>
