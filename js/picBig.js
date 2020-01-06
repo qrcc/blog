@@ -39,7 +39,7 @@ $(function(){
     }); 
   }
 
-/* $(function () {
+$(function () {
     var x = 15;
     var y = 10;
     $("img").mouseover(function (e) { //当鼠标指针从元素上移入时 
@@ -53,4 +53,4 @@ $(function(){
     }).mousemove(function (e) { //当鼠标指针从元素上移动时 
         $("#tooltip").css({ "top": (e.pageY + y) + "px", "left": (e.pageX + x) + "px" });
     });
-}); */
+});
