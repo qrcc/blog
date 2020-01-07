@@ -48,11 +48,11 @@ $(function () {
         var msg = "双击放大";
         var tooltip = "<div id='tooltip'>" + msg + "</div>";
         $("body").append(tooltip);
-        $("#tooltip").css({"position":"fixed", "top": (e.originalEvent.y + y) + "px", "left": (e.originalEvent.x + x) + "px" }).show("fast");
+        $("#tooltip").css({"position":"fixed",  "background-color":"white","top": (e.originalEvent.y + y) + "px", "left": (e.originalEvent.x + x) + "px" }).show("fast");
     }).mouseout(function () { //当鼠标指针从元素上移开时 
         var msg = "点击关闭";
         $("#tooltip").remove();
     }).mousemove(function (e) { //当鼠标指针从元素上移动时 
-        $("#tooltip").css({"position":"fixed", "top": (e.originalEvent.y + y) + "px", "left": (e.originalEvent.x + x) + "px" });
+        $("#tooltip").css({"position":"fixed", "background-color":"white","top": (e.originalEvent.y + y) + "px", "left": (e.originalEvent.x + x) + "px" });
     });
 });
