@@ -51,6 +51,6 @@ $(function () {
         var msg = "点击关闭";
         $("#tooltip").remove();
     }).mousemove(function (e) { //当鼠标指针从元素上移动时 
-        $("#tooltip").css({"position":"fixed", "top": (e.pageY + y) + "px", "left": (e.pageX + x) + "px" });
+        $("#tooltip").css({"position":"absoulte", "top": (e.pageY + y) + "px", "left": (e.pageX + x) + "px" });
     });
 });
