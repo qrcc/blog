@@ -43,16 +43,16 @@ $(function () {
     var x = 15;
     var y = 10;
     $(".aaa").mouseover(function (e) { //当鼠标指针从元素上移入时 
-        var xx = e.originalEvent.x || e.originalEvent.layerX || 0;
-        var yy = e.originalEvent.y || e.originalEvent.layerY || 0;
+        //var xx = e.originalEvent.x || e.originalEvent.layerX || 0;
+        //var yy = e.originalEvent.y || e.originalEvent.layerY || 0;
         var msg = "双击放大";
         var tooltip = "<div id='tooltip'>" + msg + "</div>";
         $("body").append(tooltip);
-        $("#tooltip").css({"position":"fixed", "top": (yy + y) + "px", "left": (xx + x) + "px" }).show("fast");
+        $("#tooltip").css({"position":"fixed", "top": (e.originalEvent.y + y) + "px", "left": (e.originalEvent.x + x) + "px" }).show("fast");
     }).mouseout(function () { //当鼠标指针从元素上移开时 
         var msg = "点击关闭";
         $("#tooltip").remove();
     }).mousemove(function (e) { //当鼠标指针从元素上移动时 
-        $("#tooltip").css({"position":"fixed", "top": (yy + y) + "px", "left": (xx + x) + "px" }).show("fast");
+        $("#tooltip").css({"position":"fixed", "top": (e.originalEvent.y + y) + "px", "left": (e.originalEvent.x + x) + "px" }).show("fast");
     });
 });
