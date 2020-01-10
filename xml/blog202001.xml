@@ -256,4 +256,25 @@
             </section>
         </bodyLine>
     </date>
+    <date name="20200110">
+        <dateLine>
+            日期：2020.01.10
+        </dateLine>
+        <headLine>
+            新作发售
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    MH新作发售，玩了一天，没什么好说的。是真的难，新招式不会用。
+                </text>
+            </section>
+            <section>
+                <text>
+                    晚上去吃了个饺子，买了点水果。梨子怕涂蜡，香蕉吃腻了，苹果不好吃，葡萄不好放，好难，最后买了点猕猴桃。
+                </text>
+            </section>
+           
+        </bodyLine>
+    </date>
 </log>
