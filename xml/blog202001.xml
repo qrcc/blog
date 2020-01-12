@@ -294,4 +294,32 @@
                     虚荣心作祟。总想超过别人，耽误正事。
                 </text>
             </section>
+        </bodyLine>
+    </date>
+    <date name="20200112">
+        <dateLine>
+            日期：2020.01.12
+        </dateLine>
+        <headLine>
+            写一天本子
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    早上了解结构，下午开始写，晚上继续写。
+                </text>
+            </section>
+            <section>
+                <text>
+                    写本子要写好绝非两天的事情，这不次于写一篇论文，若想成功还是应该尽早准备，这两天的赶工我自己都觉得写得很差劲。
+                    但是时间又不允许，没有那么多时间来准备，就算有，准备的过早的话，难免会有松懈。这是个很难的权衡。
+                </text>
+            </section>
+            <section>
+                <text>
+                    可能最好的办法是适当时候开始，开始就要抓紧做，为后面的突发情况留下应变时间，同时也可以不慌不忙的进行。做一个push的人举步维艰。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
 </log>
