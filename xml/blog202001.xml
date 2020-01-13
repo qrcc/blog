@@ -322,4 +322,23 @@
             </section>
         </bodyLine>
     </date>
-</log>
+    <date name="20200113">
+        <dateLine>
+            日期：2020.01.13
+        </dateLine>
+        <headLine>
+            玩了一天
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    还好网络不给力让我死了心
+                </text>
+            </section>
+            <section>
+                <text>
+                    明天再也不这么玩了，本来还准备做下对比试验。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
