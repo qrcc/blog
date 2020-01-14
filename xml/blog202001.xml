@@ -342,3 +342,24 @@
             </section>
         </bodyLine>
     </date>
+    <date name="20200114">
+        <dateLine>
+            日期：2020.01.14
+        </dateLine>
+        <headLine>
+            马上准备回家了
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    赶紧通了关，调了个程序。几天不写程序，已经忘了怎么写了。
+                </text>
+            </section>
+            <section>
+                <text>
+                    肚子还是有点不舒服，回家做个胃镜。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
+</log>
