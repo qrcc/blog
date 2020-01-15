@@ -362,4 +362,19 @@
             </section>
         </bodyLine>
     </date>
+    <date name="20200115">
+        <dateLine>
+            日期：2020.01.15
+        </dateLine>
+        <headLine>
+            收拾东西
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    赶快收拾东西了准备回家。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
 </log>
