@@ -377,4 +377,26 @@
             </section>
         </bodyLine>
     </date>
+    <date name="20200116">
+        <dateLine>
+            日期：2020.01.16
+        </dateLine>
+        <headLine>
+            老爸病了
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    心情不好，中午还好好的。
+                </text>
+            </section>
+            <section>
+                <text>
+                    资格认证APP做的真的烂。这些人做出来也不考虑下老人。人脸识别除一串数字，要老人几秒钟内读出来，
+                    数字又小老人大多数是老花眼看不见需要戴眼镜，带个眼镜人脸识别又有问题。
+                    这还不说5秒钟内要老人看清5个数字然后读出来，我都读不出来，可能设计者家的老人比较厉害吧。
+                </text>
+            </section>
+        </bodyLine>
+    </date>
 </log>
