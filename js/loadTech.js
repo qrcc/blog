@@ -17,14 +17,7 @@ function loadBlog(id) {
     //获得参数：每页列出的文档数,文档所属日期,以此获得对应XML文件的位置
     var listNum = 2;
     var routeDay = GetQueryString("d");
-    if(id == "blog"){
-        var route = "../xml/" + id + "/blog"+ routeDay +".xml";
-    }
-    else if(id == "tech"){
-        var route = "../xml/" + id + "/blog"+ routeDay +".xml";
-    }
-    
-    alert(route);
+    var route = "../xml/" + id + "/tech"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
     //获得XML文件
     xmltext = new XMLHttpRequest;
