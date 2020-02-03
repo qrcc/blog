@@ -59,7 +59,7 @@ function loadBlog(id) {
                 {
                     imgName = images[k].childNodes[0].nodeValue;
                     imgName = imgName.replace(/\s*/g,"");
-                    inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\" class = \"aaa\">";
+                    inner = inner + "<img src=\"../techImg/" + routeDay + "/" + imgName + "\" class = \"aaa\">";
                     //图片描述
                     imgDesc = images[k].getAttribute("describe");
                     if(imgDesc){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
