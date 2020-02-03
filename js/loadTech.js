@@ -18,7 +18,6 @@ function loadBlog(id) {
     var listNum = 2;
     var routeDay = GetQueryString("d");
     var route = "../xml/" + id + "/tech"+ routeDay +".xml";
-    alert(route);
     var pageNum = GetQueryString("page");
     //获得XML文件
     xmltext = new XMLHttpRequest;

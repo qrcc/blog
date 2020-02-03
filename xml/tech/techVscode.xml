@@ -21,8 +21,9 @@
             </section>
             <section>
                 <text>
-                    看懂一个阶段并不代表会做，最终要的是看懂了不代表已经做了，而这个时候大脑会麻痹自己觉得自己已经做完了，且不说并没有做，就算在做，过程中仍然会遇到很多问题。如果就这样去干别的事情，再回过头来，发现事情并没有那么简单， 就无端的浪费了很多时间，对自己的计划造成很大的干扰。
+                    打开VSCode命令行，可以使用快捷键Ctrl+Shift+P进行打开，输入config找到SFTP:Config
                 </text>
+                <image describe = "进入命令行找到config"> 2.png</image>
             </section>
              <section>
                 <text>
