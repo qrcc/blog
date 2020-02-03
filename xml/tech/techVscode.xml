@@ -27,13 +27,16 @@
             </section>
              <section>
                 <text>
-                    想要改变这一点，必须从每件事情开始坚定的与自己作斗争。
+                    选择后在右下角会有提示选择一个文件夹存储这个config文件，选择之后会出现这个config文件中的内容，可以再config文件中配置必要的参数。这里有个最简单的配置基本就是可以链接主机的配置
+                    。之后需要编辑的内容也都存在config文件所在的文件夹。
                 </text>
+                <image describe = "config文件内容"> 3.png</image>
             </section>
              <section>
                 <text>
-                    今天就是回头打乱了计划导致并没有高效的完成工作。
+                   因为要记住那么多IP地址实在不容易，还是把它们全部记录在本地比较方便。 最后为了解决配置远程服务器的本地域名解析问题。就要修改windows下的hosts文件，它的地址如下
                 </text>
+                <image describe = "hosts文件在win10下的位置"> 4.png</image>
             </section>
         </bodyLine>
     </date>
