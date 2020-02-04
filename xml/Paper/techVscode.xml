@@ -1,0 +1,123 @@
+
+<log>
+    <date name="20200101">
+        <dateLine>
+            日期：2020.02.03
+        </dateLine>
+        <headLine>
+            VSCode中SFTP工具安装
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服务器，实现在服务器上直接编辑代码。
+                </text>
+            </section>
+            <section>
+                <text>
+                    这个插件是SFTP工具，通过SFTP协议与服务器进行通信。打开VSCode界面选择左侧扩展栏，在搜索处直接输入SFTP进行搜索，结果的第一个就是所需要的插件。
+                </text>
+                <image describe = "找到插件"> 1.png</image>
+            </section>
+            <section>
+                <text>
+                    打开VSCode命令行，可以使用快捷键Ctrl+Shift+P进行打开，输入config找到SFTP:Config
+                </text>
+                <image describe = "进入命令行找到config"> 2.png</image>
+            </section>
+             <section>
+                <text>
+                    选择后在右下角会有提示选择一个文件夹存储这个config文件，选择之后会出现这个config文件中的内容，可以再config文件中配置必要的参数。这里有个最简单的配置基本就是可以链接主机的配置
+                    。之后需要编辑的内容也都存在config文件所在的文件夹。
+                </text>
+                <image describe = "config文件内容"> 3.png</image>
+            </section>
+             <section>
+                <text>
+                   因为要记住那么多IP地址实在不容易，还是把它们全部记录在本地比较方便。 最后为了解决配置远程服务器的本地域名解析问题。就要修改windows下的hosts文件，它的地址如下
+                </text>
+                <image describe = "hosts文件在win10下的位置"> 4.png</image>
+            </section>
+        </bodyLine>
+    </date>
+    <date name="20200101">
+        <dateLine>
+            日期：2020.02.03
+        </dateLine>
+        <headLine>
+            VSCode中SFTP工具安装
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服务器，实现在服务器上直接编辑代码。
+                </text>
+            </section>
+            <section>
+                <text>
+                    这个插件是SFTP工具，通过SFTP协议与服务器进行通信。打开VSCode界面选择左侧扩展栏，在搜索处直接输入SFTP进行搜索，结果的第一个就是所需要的插件。
+                </text>
+                <image describe = "找到插件"> 1.png</image>
+            </section>
+            <section>
+                <text>
+                    打开VSCode命令行，可以使用快捷键Ctrl+Shift+P进行打开，输入config找到SFTP:Config
+                </text>
+                <image describe = "进入命令行找到config"> 2.png</image>
+            </section>
+             <section>
+                <text>
+                    选择后在右下角会有提示选择一个文件夹存储这个config文件，选择之后会出现这个config文件中的内容，可以再config文件中配置必要的参数。这里有个最简单的配置基本就是可以链接主机的配置
+                    。之后需要编辑的内容也都存在config文件所在的文件夹。
+                </text>
+                <image describe = "config文件内容"> 3.png</image>
+            </section>
+             <section>
+                <text>
+                   因为要记住那么多IP地址实在不容易，还是把它们全部记录在本地比较方便。 最后为了解决配置远程服务器的本地域名解析问题。就要修改windows下的hosts文件，它的地址如下
+                </text>
+                <image describe = "hosts文件在win10下的位置"> 4.png</image>
+            </section>
+        </bodyLine>
+    </date>
+    <date name="20200101">
+        <dateLine>
+            日期：2020.02.03
+        </dateLine>
+        <headLine>
+            VSCode中SFTP工具安装
+        </headLine>
+        <bodyLine>
+            <section>
+                <text>
+                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服务器，实现在服务器上直接编辑代码。
+                </text>
+            </section>
+            <section>
+                <text>
+                    这个插件是SFTP工具，通过SFTP协议与服务器进行通信。打开VSCode界面选择左侧扩展栏，在搜索处直接输入SFTP进行搜索，结果的第一个就是所需要的插件。
+                </text>
+                <image describe = "找到插件"> 1.png</image>
+            </section>
+            <section>
+                <text>
+                    打开VSCode命令行，可以使用快捷键Ctrl+Shift+P进行打开，输入config找到SFTP:Config
+                </text>
+                <image describe = "进入命令行找到config"> 2.png</image>
+            </section>
+             <section>
+                <text>
+                    选择后在右下角会有提示选择一个文件夹存储这个config文件，选择之后会出现这个config文件中的内容，可以再config文件中配置必要的参数。这里有个最简单的配置基本就是可以链接主机的配置
+                    。之后需要编辑的内容也都存在config文件所在的文件夹。
+                </text>
+                <image describe = "config文件内容"> 3.png</image>
+            </section>
+             <section>
+                <text>
+                   因为要记住那么多IP地址实在不容易，还是把它们全部记录在本地比较方便。 最后为了解决配置远程服务器的本地域名解析问题。就要修改windows下的hosts文件，它的地址如下
+                </text>
+                <image describe = "hosts文件在win10下的位置"> 4.png</image>
+            </section>
+        </bodyLine>
+    </date>
+</log>
