@@ -19,6 +19,7 @@ function loadBlog(id) {
     var routeDay = GetQueryString("d");
     var route = "../xml/" + id + "/tech"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
+    alert(1);
     //获得XML文件
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
@@ -29,6 +30,7 @@ function loadBlog(id) {
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
     length = x.length;
+    alert(length);
     //获得页面导航标签
     loadIndex(length,pageNum,listNum,routeDay);
     //获得当前页面文档的起始坐标和终止坐标
