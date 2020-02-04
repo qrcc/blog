@@ -20,7 +20,7 @@ function loadBlog(id) {
     var routeDay = GetQueryString("d");
     var route = "../xml/" + id + "/paper"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
-    alert(1);
+    alert(route);
     //获得XML文件
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
