@@ -18,7 +18,7 @@ function loadBlog(id) {
     alert(id);
     var listNum = 2;
     var routeDay = GetQueryString("d");
-    var route = "../xml/" + id + "/paper"+ routeDay +".xml";
+    var route = "../xml/" + id + "/Paper"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
     alert(route);
     //获得XML文件
