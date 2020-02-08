@@ -43,11 +43,12 @@ function loadBlog(id) {
     for(i = start; i <= end; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
+        var date = x[i].getElementsByTagName("dateLine")[0].getAttribute("name");
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
         var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
         var inner = "<div class = \"article_tit_txt\">";
         inner = inner + "<p>";
-        inner = inner + "<a href=\"day/article20200101.html\" class=\"title\">-" + headLine + "-</a>";
+        inner = inner + "<a href=\"paper/paper.html?d=" + routeDay + "&date=" + date + "\" class=\"title\">-" + headLine + "-</a>";
         inner = inner + "<a class=\"athor\">" + "qren" + "</a>";
         inner = inner + "<a class=\"time\">" + dateLine + "</a>";
         inner = inner + "<a class=\"opine\">" + "评论（654）" + "</a>";
