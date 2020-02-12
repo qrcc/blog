@@ -19,6 +19,7 @@ function loadBlog(id) {
     var routeDay = GetQueryString("d");
     var route = "../xml/" + id + "/blog"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
+    var date = GetQueryString("date");
     //获得XML文件
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
@@ -30,47 +31,51 @@ function loadBlog(id) {
     x = a.getElementsByTagName("date");
     length = x.length;
     //获得页面导航标签
-    loadIndex(length,pageNum,listNum,routeDay);
+    //loadIndex(length,pageNum,listNum,routeDay);
     //获得当前页面文档的起始坐标和终止坐标
-    start = listNum * (pageNum - 1); 
+    /* start = listNum * (pageNum - 1); 
     start = (start < length)?start:(length-length%listNum - 1);
     end = start + listNum - 1;
-    end = (end <= length)?end:length - 1;
+    end = (end <= length)?end:length - 1; */
     //迭代出文章
-    for(i = start; i <= end; i++)
+    for(i = 0; i <= length; i++)
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
-        var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
-        var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
-        var inner = "<div class = \"dt-content\">";
-        inner = inner + "<div>"+dateLine+"</div>";
-        inner = inner + "<h1>"+headLine+"</h1>";
-        var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
-        //迭代出段落
-        for(j = 0; j < sectionLines.length; j++)
-        {
-            //段落中的文字
-            var text = sectionLines[j].getElementsByTagName("text");
-            inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
-            var images = sectionLines[j].getElementsByTagName("image");
-            //段落中的图片
-            if(images){
-                for(k = 0; k < images.length; k++)
-                {
-                    imgName = images[k].childNodes[0].nodeValue;
-                    imgName = imgName.replace(/\s*/g,"");
-                    inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\" class = \"aaa\">";
-                    //图片描述
-                    imgDesc = images[k].getAttribute("describe");
-                    if(imgDesc){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
+        if(dateLine == date){
+            alert(dateLine);
+            var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
+            var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
+            var inner = "<div class = \"dt-content\">";
+            inner = inner + "<div>"+dateLine+"</div>";
+            inner = inner + "<h1>"+headLine+"</h1>";
+            var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
+            //迭代出段落
+            for(j = 0; j < sectionLines.length; j++)
+            {
+                //段落中的文字
+                var text = sectionLines[j].getElementsByTagName("text");
+                inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
+                var images = sectionLines[j].getElementsByTagName("image");
+                //段落中的图片
+                if(images){
+                    for(k = 0; k < images.length; k++)
+                    {
+                        imgName = images[k].childNodes[0].nodeValue;
+                        imgName = imgName.replace(/\s*/g,"");
+                        inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\" class = \"aaa\">";
+                        //图片描述
+                        imgDesc = images[k].getAttribute("describe");
+                        if(imgDesc){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
+                    }
                 }
             }
+            inner = inner + "</div>";
+            var sectionLaber = document.createElement("section");
+            sectionLaber.className = "dt-main effect";
+            sectionLaber.innerHTML = inner;
+            div.appendChild(sectionLaber);
         }
-        inner = inner + "</div>";
-        var sectionLaber = document.createElement("section");
-        sectionLaber.className = "dt-main effect";
-        sectionLaber.innerHTML = inner;
-        div.appendChild(sectionLaber);
+        
     }
 }
 
