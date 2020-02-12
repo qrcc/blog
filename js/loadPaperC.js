@@ -15,23 +15,20 @@ function init(){
 
 function loadBlog(id) {
     //获得参数：每页列出的文档数,文档所属日期,以此获得对应XML文件的位置
-    alert(id);
     var listNum = 2;
     var routeDay = GetQueryString("d");
-    var route = "./xml/" + id + "/Paper"+ routeDay +".xml";
+    var route = "../xml/" + id + "/blog"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
-    alert(route);
     //获得XML文件
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
     xmltext.send();
     a = xmltext.responseXML;
     //将XML文件内容插入到HTML相应标签中
-    var div = document.getElementById("paperList");
+    var div = document.getElementById("blog");
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
     length = x.length;
-    alert(length);
     //获得页面导航标签
     loadIndex(length,pageNum,listNum,routeDay);
     //获得当前页面文档的起始坐标和终止坐标
@@ -45,20 +42,35 @@ function loadBlog(id) {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
         var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
-        var inner = "<div class = \"article_tit_txt\">";
-        inner = inner + "<p>";
-        inner = inner + "<a href=\"day/article20200101.html\" class=\"title\">-" + headLine + "-</a>";
-        inner = inner + "<a class=\"athor\">" + "qren" + "</a>";
-        inner = inner + "<a class=\"time\">" + dateLine + "</a>";
-        inner = inner + "<a class=\"opine\">" + "评论（654）" + "</a>";
-        inner = inner + "<a class=\"look\">" + "浏览（835）" + "</a>";
-        inner = inner + "</p>";
-        inner = inner + "<div style=\"clear:both;\"></div>";
+        var inner = "<div class = \"dt-content\">";
+        inner = inner + "<div>"+dateLine+"</div>";
+        inner = inner + "<h1>"+headLine+"</h1>";
+        var sectionLines = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section");
+        //迭代出段落
+        for(j = 0; j < sectionLines.length; j++)
+        {
+            //段落中的文字
+            var text = sectionLines[j].getElementsByTagName("text");
+            inner = inner + "<p>"+ text[0].childNodes[0].nodeValue +"</p>";
+            var images = sectionLines[j].getElementsByTagName("image");
+            //段落中的图片
+            if(images){
+                for(k = 0; k < images.length; k++)
+                {
+                    imgName = images[k].childNodes[0].nodeValue;
+                    imgName = imgName.replace(/\s*/g,"");
+                    inner = inner + "<img src=\"../blogImg/" + routeDay + "/" + imgName + "\" class = \"aaa\">";
+                    //图片描述
+                    imgDesc = images[k].getAttribute("describe");
+                    if(imgDesc){ inner = inner + "<p class = \"imgDesc\">" + imgDesc + "</p>";}
+                }
+            }
+        }
         inner = inner + "</div>";
-        var divLaber = document.createElement("div");
-        divLaber.className = "article_tit";
-        divLaber.innerHTML = inner;
-        div.appendChild(divLaber);
+        var sectionLaber = document.createElement("section");
+        sectionLaber.className = "dt-main effect";
+        sectionLaber.innerHTML = inner;
+        div.appendChild(sectionLaber);
     }
 }
 
