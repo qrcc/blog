@@ -18,7 +18,7 @@ function loadBlog(id) {
     var listNum = 2;
     var routeDay = GetQueryString("d");
     alert(routeDay);
-    var route = "../xml/" + id + "/blog"+ routeDay +".xml";
+    var route = "../xml/" + id + "/Paper"+ routeDay +".xml";
     alert(route);
     var pageNum = GetQueryString("page");
     var date = GetQueryString("date");
