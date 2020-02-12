@@ -73,6 +73,7 @@ function loadBlog(id) {
                 }
             }
             inner = inner + "</div>";
+            alert(inner);
             var sectionLaber = document.createElement("section");
             sectionLaber.className = "dt-main effect";
             sectionLaber.innerHTML = inner;
