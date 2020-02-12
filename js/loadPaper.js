@@ -15,12 +15,10 @@ function init(){
 
 function loadBlog(id) {
     //获得参数：每页列出的文档数,文档所属日期,以此获得对应XML文件的位置
-    alert(id);
     var listNum = 2;
     var routeDay = GetQueryString("d");
     var route = "./xml/" + id + "/Paper"+ routeDay +".xml";
     var pageNum = GetQueryString("page");
-    alert(route);
     //获得XML文件
     xmltext = new XMLHttpRequest;
     xmltext.open("GET",route,false);
@@ -31,7 +29,6 @@ function loadBlog(id) {
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
     length = x.length;
-    alert(length);
     //获得页面导航标签
     loadIndex(length,pageNum,listNum,routeDay);
     //获得当前页面文档的起始坐标和终止坐标
@@ -44,6 +41,7 @@ function loadBlog(id) {
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var date = x[i].getAttribute("name");
+        alert(date);
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
         var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
         var inner = "<div class = \"article_tit_txt\">";
