@@ -40,9 +40,10 @@ function loadBlog(id) {
     //迭代出文章
     for(i = 0; i <= length; i++)
     {
-        var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
-        if(dateLine == date){
-            alert(dateLine);
+        var date1 = x[i].getAttribute("name");
+        if(date1 == date){
+            alert(date1);
+            var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
             var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
             var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
             var inner = "<div class = \"dt-content\">";
