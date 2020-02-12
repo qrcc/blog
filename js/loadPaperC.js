@@ -28,7 +28,7 @@ function loadBlog(id) {
     xmltext.send();
     a = xmltext.responseXML;
     //将XML文件内容插入到HTML相应标签中
-    var div = document.getElementById("blog");
+    var div = document.getElementById("paper");
     //document.getElementById("xmlid").innerHTML = a.getElementsByTagName("to")[2].childNodes[0].nodeValue;
     x = a.getElementsByTagName("date");
     length = x.length;
