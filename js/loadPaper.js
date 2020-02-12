@@ -41,7 +41,6 @@ function loadBlog(id) {
     {
         var dateLine = x[i].getElementsByTagName("dateLine")[0].childNodes[0].nodeValue;
         var date = x[i].getAttribute("name");
-        alert(date);
         var headLine = x[i].getElementsByTagName("headLine")[0].childNodes[0].nodeValue;
         var bodyLine = x[i].getElementsByTagName("bodyLine")[0].getElementsByTagName("section")[0].childNodes[0].nodeValue;
         var inner = "<div class = \"article_tit_txt\">";
