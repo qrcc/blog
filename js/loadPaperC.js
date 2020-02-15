@@ -17,9 +17,7 @@ function loadBlog(id) {
     //获得参数：每页列出的文档数,文档所属日期,以此获得对应XML文件的位置
     var listNum = 2;
     var routeDay = GetQueryString("d");
-    alert(routeDay);
     var route = "../xml/" + id + "/Paper"+ routeDay +".xml";
-    alert(route);
     var pageNum = GetQueryString("page");
     var date = GetQueryString("date");
     //获得XML文件
@@ -73,7 +71,6 @@ function loadBlog(id) {
                 }
             }
             inner = inner + "</div>";
-            alert(inner);
             var sectionLaber = document.createElement("section");
             sectionLaber.className = "dt-main effect";
             sectionLaber.innerHTML = inner;
