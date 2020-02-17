@@ -10,7 +10,7 @@
         <bodyLine>
             <section>
                 <text>
-                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服务器，实现在服务器上直接编辑代码。
+                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个`i(t_a)=A[(1-n)*t_a/(1-r)+b]/[(t_a/(1-r))+b]^(n+1)`插件来链接服务器，实现在服务器上直接编辑代码。
                 </text>
             </section>
             <section>
@@ -27,7 +27,7 @@
             </section>
              <section>
                 <text>
-                    选择后在右下角会有提示选择一个文件夹存储这个config文件，选择之后会出现这个config文件中的内容，可以再config文件中配置必要的参数。这里有个最简单的配置基本就是可以链接主机的配置
+                    选择后在右下角会有提示选择一个文件夹存储这个config文件，选择之后会出现这个config文件中的内`i(t_a)=A[(1-n)*t_a/(1-r)+b]/[(t_a/(1-r))+b]^(n+1)`容，可以再config文件中配置必要的参数。这里有个最简单的配置基本就是可以链接主机的配置
                     。之后需要编辑的内容也都存在config文件所在的文件夹。
                 </text>
                 <image describe = "config文件内容"> 3.png</image>
@@ -50,12 +50,12 @@
         <bodyLine>
             <section>
                 <text>
-                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服务器，实现在服务器上直接编辑代码。
+                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链`i(t_a)=A[(1-n)*t_a/(1-r)+b]/[(t_a/(1-r))+b]^(n+1)`接服务器，实现在服务器上直接编辑代码。
                 </text>
             </section>
             <section>
                 <text>
-                    这个插件是SFTP工具，通过SFTP协议与服务器进行通信。打开VSCode界面选择左侧扩展栏，在搜索处直接输入SFTP进行搜索，结果的第一个就是所需要的插件。
+                    这个插件是SFTP工具，通过SFTP协议与服务器进行通信。打开VSCode界面选择左侧扩展栏，在搜索处直接`i(t_a)=A[(1-n)*t_a/(1-r)+b]/[(t_a/(1-r))+b]^(n+1)`输入SFTP进行搜索，结果的第一个就是所需要的插件。
                 </text>
                 <image describe = "找到插件"> 1.png</image>
             </section>
@@ -74,7 +74,7 @@
             </section>
              <section>
                 <text>
-                   因为要记住那么多IP地址实在不容易，还是把它们全部记录在本地比较方便。 最后为了解决配置远程服务器的本地域名解析问题。就要修改windows下的hosts文件，它的地址如下
+                   因为要记住那么多IP地址实在不容易，还是把它们全部记录在本地比较方便。 最后为了解决配置远程服务器的本`i(t_a)=A[(1-n)*t_a/(1-r)+b]/[(t_a/(1-r))+b]^(n+1)`地域名解析问题。就要修改windows下的hosts文件，它的地址如下
                 </text>
                 <image describe = "hosts文件在win10下的位置"> 4.png</image>
             </section>
@@ -90,7 +90,7 @@
         <bodyLine>
             <section>
                 <text>
-                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服务器，实现在服务器上直接编辑代码。
+                    VSCode因为有着丰富的插件支持而表现得非常强大，这里介绍如何使用VSCode的一个插件来链接服`i(t_a)=A[(1-n)*t_a/(1-r)+b]/[(t_a/(1-r))+b]^(n+1)`务器，实现在服务器上直接编辑代码。
                 </text>
             </section>
             <section>
